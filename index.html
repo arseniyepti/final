@@ -1,16 +1,202 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Webpack 4 Starter</title>
+  <title>Document</title>
 <link href="style.css" rel="stylesheet"></head>
 
 <body>
-  <img src="./img/webpack.svg" alt="Webpack Logo" width="200px">
-  <h3>sjdbfhwsdbfvhd </h3>
+  <div class="wrapper">
+    <nav class="nav">
+      <div class="nav__header">
+        <button class="button button--close"></button>
+        <a href="#" class="header__logo">
+          <img src="img/logo.svg" alt="логотип cps" title="логотип cps">
+        </a>
+        <button class="button button--search"></button>
+      </div>
+      <div class="nav__menu-wrap">
+        <ul class="nav__menu">
+          <li class="nav__list-item">
+            <a class="nav__link-item" href="#">Ремонт техники</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="nav__link-item" href="#">Услуги и сервисы</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="nav__link-item" href="#">Корпоративным клиентам</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="nav__link-item" href="#">Продавцам техники</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="nav__link-item" href="#">Пратнерам</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="nav__link-item" href="#">Производителям</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="nav__link-item" href="#">Наши сервисные центры</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="nav__link-item" href="#">Контакты</a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav__contact">
+        <div class="nav__contact-wrap">
+          <button class="button button--phone"></button>
+          <button class="button button--message"></button>
+          <button class="button button--user"></button>
+        </div>
+        <div class="nav__contact-info-wrap">
+          <a href="mailto:mail@cps.com" class="nav__contact-mail">mail@cps.com</a>
+          <a href="tel:8 800 890 8900" class="nav__contact-phone-number">8 800 890 8900</a>
+          <div class="nav__language">
+            <a href="#" class="nav__language-link">RU</a>
+            <a href="#" class="nav__language-link">EN</a>
+            <a href="#" class="nav__language-link">CH</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    
+
+
+    <header class="header">
+      <div class="header__main">
+        <button class="button button--menu"></button>
+        <a href="#" class="header__logo">
+          <img src="img/logo.svg" alt="логотип cps" title="логотип cps">
+        </a>
+        <div class="header__wrap">
+          <button class="button button--phone"></button>
+          <button class="button button--message"></button>
+          <button class="button button--user"></button>
+        </div>
+        <div class="header__service-buttons">
+          <button class="button--requisition button"></button>
+          <button class="button--status-fix button"></button>
+        </div>
+      </div>
+    </header>
+
+
+    
+
+
+    <main class="main">
+      <section class="service">
+        <header class="service__header">
+          <h2 class="service__title">Услуги и сервисы</h2>
+          <div class="service__header-wrap">
+            <button class="button--requisition button">Оставить заявку</button>
+            <button class="button--status-fix button">Статус ремонта</button>
+          </div>
+        </header>
+        <nav class="service__nav">
+          <ul class="service__nav-wrap">
+            <li class="service__list-item">
+              <a class="service__link-item" href="#">Ремонтируемые бренды</a>
+            </li>
+            <li class="service__list-item">
+              <a class="service__link-item" href="#">Ремонтируемые устройства</a>
+            </li>
+            <li class="service__list-item">
+              <a class="service__link-item" href="#">Цены на услуги</a>
+            </li>
+            <li class="service__list-item">
+              <a class="service__link-item" href="#">Адреса сервисных центров</a>
+            </li>
+            <li class="service__list-item">
+              <a class="service__link-item" href="#">Специальные цены</a>
+            </li>
+            <li class="service__list-item">
+              <a class="service__link-item" href="#">Отзывы</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="service__info">
+          <div class="service__info-text-wrap">
+            <p class="service__info-text">Мы являемся авторизованным сервисным центром по ремонту техники Dell.
+              Только у нас вы можете отремонтироватьсвой ноутбук Dell с официальной гарантией производителя. </p>
+            <p class="service__info-text">Мы успешно работаем с 1992 года и заслужили репутацию надежного
+              партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем,
+              что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
+            <button class="hide-and-show-button">Читать далее</button>
+          </div>
+          <img class="service__info-img" src="img/img.png" title="Если ты на меня сейчас смотришь, значит я в макете" alt="картинка">
+        </div>
+      </section>
+
+
+      
+
+
+      <section class="brands">
+        <h2 class="brands__title">Ремонт техники различных брендов</h2>
+        <div class="brands__images-wrap brands__images-wrap-hidden">
+          <div class="brands__images-item">
+            <img class="brands__image" src="img/brands/lenovo.png" alt="lenovo" title="lenovo">
+            <button class="button--brands button"></button></div>
+          <div class="brands__images-item">
+            <img class="brands__image" src="img/brands/hp.png" alt="hp" title="hp">
+            <button class="button--brands button"></button>
+          </div>
+          <div class="brands__images-item">
+            <img class="brands__image" src="img/brands/bosch.png" alt="bosch" title="bosch">
+            <button class="button--brands button"></button>
+          </div>
+          <div class="brands__images-item">
+            <img class="brands__image" src="img/brands/apple.png" alt="apple" title="apple">
+            <button class="button--brands button"></button>
+          </div>
+          <div class="brands__images-item">
+            <img class="brands__image" src="img/brands/acer.png" alt="acer" title="acer">
+            <button class="button--brands button"></button>
+          </div>
+          <div class="brands__images-item">
+            <img class="brands__image" src="img/brands/viewsonic.png" alt="viewsonic" title="viewsonic">
+            <button class="button--brands button"></button>
+          </div>
+          <div class="brands__images-item">
+            <img class="brands__image" src="img/brands/lenovo.png" alt="lenovo" title="lenovo">
+            <button class="button--brands button"></button>
+          </div>
+          <div class="brands__images-item">
+            <img class="brands__image" src="img/brands/samsung.png" alt="samsung" title="samsung">
+            <button class="button--brands button"></button>
+          </div>
+          <div class="brands__images-item">
+            <img class="brands__image" src="img/brands/sony.png" alt="sony" title="sony">
+            <button class="button--brands button"></button>
+          </div>
+          <div class="brands__images-item">
+            <img class="brands__image" src="img/brands/hp.png" alt="hp" title="hp">
+            <button class="button--brands button"></button>
+          </div>
+          <div class="brands__images-item">
+            <img class="brands__image" src="img/brands/bosch.png" alt="bosch" title="bosch">
+            <button class="button--brands button"></button>
+          </div>
+          <div class="brands__images-item">
+            <img class="brands__image" src="img/brands/apple.png" alt="apple" title="apple">
+            <button class="button--brands button"></button>
+          </div>
+          <div class="brands__images-item">
+            <img class="brands__image" src="img/brands/acer.png" alt="acer" title="acer">
+            <button class="button--brands button"></button>
+          </div>
+        </div>
+        <button id="brands-button" class="hide-and-show-button">Показать все</button>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
 <script type="text/javascript" src="./js/bundle.js"></script></body>
 
 </html>
