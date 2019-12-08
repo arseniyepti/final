@@ -476,7 +476,8 @@ body {
     width: 120px;
     height: 32px;
     border-radius: 16px;
-    transition: all .3s ease; }
+    transition: all .3s ease;
+    border: 2px solid #FF3E79; }
   .button--order::after {
     content: "Заказать";
     color: #fff;
