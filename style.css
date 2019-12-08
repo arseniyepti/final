@@ -382,16 +382,15 @@ th {
   box-sizing: border-box; }
 
 body {
-  margin: 0 auto;
+  width: 100vw;
   font-family: "TTLakes";
-  max-width: 1440px;
   background: #f2f2f2; }
 
 .wrapper {
   display: flex;
   flex-flow: row nowrap;
-  margin: 0 auto;
-  max-width: 1440px; }
+  justify-content: center;
+  margin: 0 auto; }
 
 .hide-and-show-button {
   background-color: transparent;
@@ -408,6 +407,8 @@ body {
     margin-right: 16px;
     display: inline-block;
     background-image: url(./static/svg3.svg); }
+  .hide-and-show-button--position {
+    margin-top: 25px; }
 
 .button {
   background-color: transparent;
@@ -466,8 +467,41 @@ body {
   .button--user::after {
     background-image: url(./static/user.svg);
     margin-right: 15px; }
+  .button--brands--position {
+    position: absolute;
+    bottom: 15px;
+    right: 15px; }
+  .button--order {
+    background-color: #FF3E79;
+    width: 120px;
+    height: 32px;
+    border-radius: 16px;
+    transition: all .3s ease; }
+  .button--order::after {
+    content: "Заказать";
+    color: #fff;
+    display: flex;
+    padding-left: 12px;
+    align-items: center;
+    width: 120px;
+    height: 32px;
+    border-radius: 16px;
+    background: url(./static/arrow-right-white.svg) no-repeat 90% 50%/15px 15px; }
+  .button--order:hover::after {
+    color: #FF3E79;
+    background-color: #fff;
+    background: url(./static/arrow-right-pink.svg) no-repeat 90% 50%/15px 15px; }
+  .button--order:hover {
+    border: 2px solid #FF3E79;
+    background-color: #fff; }
 
 /* _____________________@media button_____________________________ */
+@media (max-width: 768px) {
+  .button--order {
+    position: absolute;
+    bottom: 15px;
+    right: 15px; } }
+
 @media (max-width: 1300px) {
   .button--requisition:first-child {
     margin: 0; } }
@@ -478,7 +512,6 @@ body {
   width: 100%;
   max-width: 1120px;
   flex-flow: row nowrap;
-  margin: 0 auto;
   padding: 18px 24px;
   align-items: center;
   background-color: #fff; }
@@ -623,9 +656,14 @@ body {
       margin-top: 140px; } }
 
 /* ______________________Секция услуги и сервисы_________________ */
+.main-wrapper {
+  max-width: 1120px;
+  width: 100%; }
+
 .main {
   margin: 0 auto;
   max-width: 1120px;
+  width: 100%;
   display: flex;
   flex-flow: column nowrap; }
 
@@ -677,11 +715,9 @@ body {
     justify-content: space-between; }
   .service__info-text-wrap {
     padding-right: 32px;
-    width: 50%;
-    min-width: 300px; }
+    width: 50%; }
   .service__info-img {
     width: 50%;
-    min-width: 300px;
     border-radius: 6px; }
   .service__info-text {
     color: #1B1C21;
@@ -700,6 +736,8 @@ body {
   .service__info-text-wrap {
     width: 100%;
     max-width: 100%; }
+  .service__info {
+    flex-flow: column; }
   .service__info-img {
     margin-top: 25px;
     width: 100%;
@@ -707,8 +745,8 @@ body {
 
 @media (max-width: 1300px) {
   .service__nav-wrap {
-    flex-wrap: nowrap;
-    max-width: 100%; }
+    overflow: hidden;
+    flex-wrap: nowrap; }
   .service__nav {
     overflow: hidden;
     max-width: 100%; }
@@ -718,7 +756,6 @@ body {
 /* _____________________Секция-бренды_____________________________ */
 .brands {
   width: 100%;
-  min-height: 600px;
   background: #F8F8F8;
   padding-bottom: 25px; }
   .brands__title {
@@ -764,6 +801,187 @@ body {
 @media (max-width: 768px) {
   .brands__images-wrap {
     justify-content: center; } }
+
+@media (max-width: 555px) {
+  .brands__images-item {
+    width: 100%; } }
+
+/* _____________________Секция-ремонт техники_____________________________ */
+.fix-technic {
+  width: 100%;
+  background: #F8F8F8;
+  padding-bottom: 50px; }
+  .fix-technic__title {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #7E7E82;
+    font-weight: normal;
+    padding: 16px 0 16px 16px;
+    margin: 0;
+    background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%);
+    border-top: 1px solid #D9FFF5;
+    border-bottom: 1px solid #D9FFF5; }
+  .fix-technic__images-wrap {
+    width: 100%;
+    padding: 25px 0 0 25px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; }
+  .fix-technic__images-wrap-hidden {
+    height: 180px;
+    overflow: hidden; }
+  .fix-technic__images-item {
+    width: 225px;
+    height: 160px;
+    position: relative;
+    border: 1px solid #EAEAEA;
+    padding-left: 15px;
+    background-color: #fff;
+    border-radius: 6px;
+    margin-right: 25px; }
+  .fix-technic .fix-technic__name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #1B1C21; }
+
+/* _____________________@media Секции-бренды_____________________________ */
+@media (min-width: 769px) and (max-width: 1119px) {
+  .fix-technic__images-item {
+    width: 29%; }
+  .fix-technic__images-wrap {
+    justify-content: space-around; } }
+
+@media (max-width: 768px) {
+  .fix-technic__images-wrap {
+    justify-content: center; } }
+
+@media (max-width: 555px) {
+  .fix-technic__images-item {
+    width: 100%; } }
+
+.prices {
+  width: 100%;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  font-weight: normal;
+  color: #1B1C21;
+  border-bottom: 1px solid #D9FFF5;
+  padding-bottom: 25px; }
+  .prices__title {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #7E7E82;
+    font-weight: normal;
+    padding: 16px 0 16px 16px;
+    margin: 0;
+    background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%);
+    border-top: 1px solid #D9FFF5;
+    border-bottom: 1px solid #D9FFF5; }
+  .prices__column-title {
+    display: flex; }
+  .prices__list-column-name-fix {
+    margin-right: auto;
+    margin-left: 15px; }
+  .prices__list-column-name-term {
+    width: 235px; }
+  .prices__list-column-name-price {
+    width: 100px; }
+  .prices__list-wrap {
+    background-color: #fff; }
+  .prices__wrap {
+    border-radius: 6px;
+    padding: 0 25px; }
+  .prices__list-wrap {
+    border-radius: 6px;
+    padding: 0 15px; }
+  .prices__list-item {
+    display: flex;
+    align-items: center;
+    height: 65px;
+    border-bottom: 1px solid #eaeaea; }
+  .prices__list-item:last-child {
+    border-bottom: none; }
+  .prices__list-price {
+    margin-left: auto; }
+  .prices__list-price, .prices__list-term {
+    width: 100px; }
+  .prices__reference {
+    display: block;
+    max-width: 420px; }
+  .prices__button {
+    text-align: left;
+    width: auto;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1B1C21;
+    transition: color .3s ease; }
+  .prices__button:hover {
+    color: #7E7E82; }
+  .prices__button::after {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(./static/arrow-right-pink.svg) no-repeat;
+    vertical-align: middle;
+    margin-left: 10px; }
+
+@media (max-width: 768px) {
+  .prices__column-title {
+    display: none; }
+  .prices__list-wrap {
+    overflow: hidden;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: transparent;
+    padding: 0; }
+  .prices__list-item {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-width: 260px;
+    height: 200px;
+    margin-right: 15px;
+    background-color: #fff; }
+  .prices__list-name,
+  .prices__list-price,
+  .prices__list-term {
+    width: auto;
+    margin-left: 15px; }
+  .prices__list-name::before,
+  .prices__list-price::before,
+  .prices__list-term::before {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #7E7E82; }
+  .prices__list-name::before {
+    content: "Ремонтные услуги"; }
+  .prices__list-price::before {
+    content: "Цена"; }
+  .prices__list-term::before {
+    content: "Срок"; } }
+
+.footer {
+  display: block;
+  width: 100%;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #7E7E82; }
+  .footer__info {
+    width: 330px; }
+  .footer__year {
+    display: block; }
 
 
 /*# sourceMappingURL=style.css.map*/
