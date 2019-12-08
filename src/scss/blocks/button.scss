@@ -124,6 +124,7 @@
     height: 32px;
     border-radius: 16px;
     transition: all .3s ease;
+    border: 2px solid $btn-color-pink;
   }
 
   &--order::after {
