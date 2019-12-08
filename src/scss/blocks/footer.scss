@@ -1,0 +1,21 @@
+.footer {
+  display: block;
+  width: 100%;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  color: $font-color-light;
+
+  &__info {
+    width: 330px;
+  }
+
+  &__year {
+    display: block;
+  }
+}

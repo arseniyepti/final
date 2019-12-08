@@ -1,0 +1,167 @@
+// _________________Секция цены на услуги________________
+
+.prices {
+  width: 100%;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  font-weight: normal;
+  color: $font-color-dark;
+  border-bottom: 1px solid #D9FFF5;
+  padding-bottom: 25px;
+
+  &__title {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $font-color-light;
+    font-weight: normal;
+    padding: 16px 0 16px 16px;
+    margin: 0;
+    background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%);
+    border-top: 1px solid #D9FFF5;
+    border-bottom: 1px solid #D9FFF5;
+  }
+
+  &__column-title {
+    display: flex;
+  }
+
+  &__list-column-name-fix {
+    margin-right: auto;
+    margin-left: 15px;
+  }
+
+  &__list-column-name-term {
+    width: 235px;
+  }
+
+  &__list-column-name-price {
+    width: 100px;
+  }
+
+  &__list-wrap {
+    background-color: $bcg-color-white;
+    // margin-left: 10px;
+  }
+
+  &__wrap {
+    border-radius: 6px;
+    padding: 0 25px;
+  }
+
+  &__list-wrap {
+    border-radius: 6px;
+    padding: 0 15px;
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    height: 65px;
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  &__list-item:last-child {
+    border-bottom: none;
+  }
+
+  &__list-price {
+    margin-left: auto;
+  }
+
+  &__list-price,
+  &__list-term {
+    width: 100px;
+  }
+
+  &__reference {
+    display: block;
+    max-width: 420px;
+  }
+
+  &__button {
+    text-align: left;
+    width: auto;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: $font-color-dark;
+    transition: color .3s ease;
+  }
+
+  &__button:hover {
+    color: $font-color-light;
+  }
+
+  &__button::after {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url("../img/arrow-right-pink.svg") no-repeat;
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+
+}
+
+// _________________Секция цены на услуги________________
+
+
+@media (max-width: 768px) {
+
+  .prices__column-title {
+    display: none;
+  }
+
+  .prices__list-wrap {
+    overflow: hidden;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .prices__list-item {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-width: 260px;
+    height: 200px;
+    margin-right: 15px;
+    background-color: $bcg-color-white;
+  }
+
+  .prices__list-name,
+  .prices__list-price,
+  .prices__list-term {
+    width: auto;
+    margin-left: 15px;
+  }
+
+  .prices__list-name::before,
+  .prices__list-price::before,
+  .prices__list-term::before {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: $font-color-light;
+  }
+
+  .prices__list-name::before {
+    content: "Ремонтные услуги";
+  }
+
+  .prices__list-price::before {
+    content: "Цена";
+  }
+
+  .prices__list-term::before {
+    content: "Срок";
+  }
+
+  .price__button {}
+
+}

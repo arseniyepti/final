@@ -1,0 +1,79 @@
+/* _____________________Секция-бренды_____________________________ */
+
+.brands {
+  width: 100%;
+  background: #F8F8F8;
+  padding-bottom: 25px;
+
+  &__title {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $font-color-light;
+    font-weight: normal;
+    padding: 16px 0 16px 16px;
+    margin: 0;
+    background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%);
+    border-top: 1px solid #D9FFF5;
+    border-bottom: 1px solid #D9FFF5;
+  }
+
+  &__images-wrap {
+    width: 100%;
+    padding: 25px 0 0 25px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  &__images-wrap-hidden {
+    height: 180px;
+    overflow: hidden;
+  }
+
+  &__images-item {
+    height: 72px;
+    border: 1px solid #EAEAEA;
+    display: flex;
+    padding: 16px;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $bcg-color-white;
+    border-radius: 6px;
+    width: 240px;
+    margin-right: 25px;
+    margin-bottom: 8px;
+  }
+}
+
+
+/* _____________________@media Секции-бренды_____________________________ */
+
+
+@media (min-width: 769px) and (max-width: 1119px) {
+
+  .brands__images-item {
+    width: 29%;
+  }
+
+  .brands__images-wrap {
+    justify-content: space-around;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .brands__images-wrap {
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 555px) {
+
+  .brands__images-item {
+    width: 100%;
+  }
+
+}

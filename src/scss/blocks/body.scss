@@ -1,0 +1,23 @@
+$btn-color-pink: #FF3E79;
+$btn-color-darkpink: #92324f;
+$font-color-dark: #1B1C21;
+$font-color-light: #7E7E82;
+$bcg-color-white: #fff;
+$icons-color-green: #41F6D7;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  font-family: "TTLakes";
+  background: #f2f2f2;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 0 auto;
+}

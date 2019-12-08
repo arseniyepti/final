@@ -1,0 +1,170 @@
+.hide-and-show-button {
+  background-color: transparent;
+  border: none;
+  color: $font-color-dark;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 14px;
+  margin-left: 64px;
+
+  &::before {
+    content: "";
+    height: 10px;
+    width: 8px;
+    margin-right: 16px;
+    display: inline-block;
+    background-image: url("../img/svg3.svg");
+  }
+
+  &--position {
+    margin-top: 25px;
+  }
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: $font-color-dark;
+  font-weight: 500;
+
+  &--requisition:first-child {
+    margin-right: 32px;
+  }
+
+  &--requisition::after {
+    background-image: url("../img/tools.svg");
+    margin-right: 8px;
+  }
+
+  &--status-fix::after {
+    background-image: url("../img/status.svg");
+  }
+
+  &--menu::after {
+    background: url("../img/menu.svg") no-repeat 50% 50%;
+    margin-right: 15px;
+  }
+
+  &::after {
+    border-radius: 50%;
+    background-color: $btn-color-pink;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-color 0.3s ease;
+  }
+
+  &--requisition::after,
+  &--status-fix::after {
+    margin-left: 8px;
+  }
+
+  &:hover::after {
+    background-color: $btn-color-darkpink;
+  }
+
+  &--brands {
+    background-color: $bcg-color-white;
+    border: 2px solid $btn-color-pink;
+    border-radius: 50%;
+  }
+
+  &--brands::after {
+    background: url(../img/arrow-right-pink.svg) no-repeat 50% 50%;
+  }
+
+  &--brands:hover::after {
+    background: url(../img/arrow-right-white.svg) no-repeat 50% 50% / 10px;
+    background-color: $btn-color-pink;
+    border: 2px solid $btn-color-darkpink;
+  }
+
+  &--close {
+    margin-right: 15px;
+  }
+
+  &--close::after {
+    background-image: url("../img/close.svg");
+  }
+
+  &--search::after {
+    background-image: url("../img/search.svg");
+  }
+
+  &--phone::after {
+    background-image: url("../img/call.svg");
+    margin-right: 15px;
+  }
+
+  &--message::after {
+    background-image: url("../img/message.svg");
+    margin-right: 15px;
+  }
+
+  &--user::after {
+    background-image: url("../img/user.svg");
+    margin-right: 15px;
+  }
+
+  &--brands--position {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  &--order {
+    background-color: $btn-color-pink;
+    width: 120px;
+    height: 32px;
+    border-radius: 16px;
+    transition: all .3s ease;
+  }
+
+  &--order::after {
+    content: "Заказать";
+    color: $bcg-color-white;
+    display: flex;
+    padding-left: 12px;
+    align-items: center;
+    width: 120px;
+    height: 32px;
+    border-radius: 16px;
+    background: url("../img/arrow-right-white.svg")no-repeat 90% 50% / 15px 15px;
+  }
+
+  &--order:hover::after {
+    color: $btn-color-pink;
+    background-color: $bcg-color-white;
+    background: url("../img/arrow-right-pink.svg")no-repeat 90% 50% / 15px 15px;
+  }
+
+  &--order:hover {
+    border: 2px solid $btn-color-pink;
+    background-color: $bcg-color-white;
+  }
+
+
+}
+
+/* _____________________@media button_____________________________ */
+
+@media (max-width: 768px) {
+
+  .button--order {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+@media (max-width:1300px) {
+  .button--requisition:first-child {
+    margin: 0;
+  }
+}

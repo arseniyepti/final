@@ -1,0 +1,150 @@
+/* ______________________Секция услуги и сервисы_________________ */
+
+.main-wrapper {
+  max-width: 1120px;
+  width: 100%;
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 1120px;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.service {
+  max-width: 1120px;
+  padding-top: 42px;
+  padding-bottom: 26px;
+  padding-right: 25px;
+  padding-left: 25px;
+  background: #F8F8F8;
+
+
+  &__header {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    margin-left: -25px;
+    padding-left: 32px;
+    border-left: 2px solid $icons-color-green;
+    color: $font-color-dark;
+    font-weight: 700;
+    font-size: 28px;
+    margin-right: auto;
+  }
+
+  &__header-wrap {
+    margin-left: auto;
+    display: flex;
+  }
+
+  &__nav-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline-start: 0;
+  }
+
+  &__list-item {
+    list-style: none;
+    padding: 0 17px;
+    border-radius: 6px;
+    border: 2px solid transparent;
+  }
+
+  &__list-item:hover {
+    border: 2px solid #b8ffec;
+    background-color: $bcg-color-white;
+  }
+
+  &__link-item {
+    display: inline-block;
+    line-height: 40px;
+    text-decoration: none;
+    font-size: 16px;
+    color: $font-color-light;
+  }
+
+  &__info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  &__info-text-wrap {
+    padding-right: 32px;
+    width: 50%;
+  }
+
+  &__info-img {
+    width: 50%;
+    border-radius: 6px;
+  }
+
+  &__info-text {
+    color: $font-color-dark;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__info-text:first-child {
+    margin-bottom: 20px;
+  }
+}
+
+
+/* _____________________@media Секции-услуги и сервисы_____________________________ */
+
+@media (max-width:1300px) {
+
+  .service__header-wrap {
+    display: none;
+  }
+
+}
+
+@media (max-width:960px) {
+
+  .service__info-text-wrap {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .service__info {
+    flex-flow: column;
+  }
+
+  .service__info-img {
+    margin-top: 25px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+}
+
+@media (max-width:1300px) {
+
+  .service__nav-wrap {
+    overflow: hidden;
+    flex-wrap: nowrap;
+    // max-width: 100%;
+  }
+
+  .service__nav {
+    // position: absolute;
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  .service__list-item {
+    flex-shrink: 0;
+  }
+
+}
