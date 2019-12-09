@@ -38,29 +38,25 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader, // Extract css to separate file
           'css-loader', // translates CSS into CommonJS
-          'sass-loader', // compiles Sass to CSS, using Node Sass by default
-          "postcss-loader" // parse CSS and add vendor prefixes to CSS rules
+          "postcss-loader", // compiles Sass to CSS, using Node Sass by default
+          'sass-loader' // parse CSS and add vendor prefixes to CSS rules
         ],
       },
 
       // Подключаем шрифты из css
       {
         test: /\.(eot|ttf|woff|woff2)$/,
-        use: [
-          {
-            loader: 'file-loader?name=./fonts/[name].[ext]'
-          },
-        ]
+        use: [{
+          loader: 'file-loader?name=./fonts/[name].[ext]'
+        }, ]
       },
 
       // Подключаем картинки из css
       {
         test: /\.(svg|png|jpg|jpeg|webp)$/,
-        use: [
-          {
-            loader: 'file-loader?name=./static/[name].[ext]'
-          },
-        ]
+        use: [{
+          loader: 'file-loader?name=./static/[name].[ext]'
+        }, ]
       },
     ],
   },
@@ -82,11 +78,9 @@ module.exports = {
     }),
 
     // Копируем картинки
-    new CopyWebpackPlugin([
-      {
-        from: './src/img',
-        to: 'img',
-      },
-    ])
+    new CopyWebpackPlugin([{
+      from: './src/img',
+      to: 'img',
+    }, ])
   ],
 };

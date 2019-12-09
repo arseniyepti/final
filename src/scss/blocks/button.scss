@@ -76,13 +76,13 @@
   }
 
   &--brands::after {
-    background: url(../img/arrow-right-pink.svg) no-repeat 50% 50%;
+    background: url(../img/arrow-right-pink.svg) no-repeat 50% 50% / 10px;
   }
 
   &--brands:hover::after {
     background: url(../img/arrow-right-white.svg) no-repeat 50% 50% / 10px;
     background-color: $btn-color-pink;
-    border: 2px solid $btn-color-darkpink;
+    // border: 2px solid $btn-color-darkpink;
   }
 
   &--close {
@@ -167,5 +167,11 @@
 @media (max-width:1300px) {
   .button--requisition:first-child {
     margin: 0;
+  }
+}
+
+@media (min-width:1301px) {
+  .button--close {
+    display: none;
   }
 }

@@ -1,34 +1,38 @@
 "use strict";
-console.log("bot");
 
 let brandsButton = document.querySelector('#brands-button');
 let brandsWrap = document.querySelector('.brands__images-wrap');
 let arrBrands = document.querySelectorAll('.brands__images-item');
-let arrBrandsButtons = document.querySelectorAll('.brands__button');
+let arrBrandsButtons = document.querySelectorAll('.button--brands');
 brandsButton.textContent = `Показать все (${arrBrands.length})`;
-let setTabIndex = function () {
+
+let setHideClassBrands = function () {
   for (let i = 0; i < arrBrands.length; i++) {
-    if (brandsWrap.classList.contains('brands__images-wrap-hidden')) {
-      if (screen.width > 1119 && i > 7) {
-        arrBrandsButtons[i].setAttribute('tabindex', '-1');
-      }
-      if (screen.width > 768 && screen.width < 1120 && i > 5) {
-        arrBrandsButtons[i].setAttribute('tabindex', '-1');
-      }
-      if (screen.width < 768 && i > 1) {
-        arrBrandsButtons[i].setAttribute('tabindex', '-1');
-      }
+
+    if (screen.width > 1351 && i > 7) {
+      arrBrands[i].classList.toggle('brands__images-item-hidden');
+    }
+    if (screen.width > 768 && screen.width < 1352 && i > 5) {
+      arrBrands[i].classList.toggle('brands__images-item-hidden');
+    }
+    if (window.getComputedStyle(brandsWrap).overflow == 'scroll') {
+      arrBrands[i].classList.remove('brands__images-item-hidden');
     }
   }
+
 }
-setTabIndex();
+
+setHideClassBrands();
 
 brandsButton.addEventListener('click', function (evt) {
   evt.preventDefault();
+  setHideClassBrands();
   brandsWrap.classList.toggle('brands__images-wrap-hidden');
+
   if (!brandsWrap.classList.contains('brands__images-wrap-hidden')) {
     brandsButton.textContent = 'Скрыть';
   } else {
     brandsButton.textContent = `Показать все (${arrBrands.length})`;
+
   }
 })
