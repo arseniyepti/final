@@ -1,0 +1,22 @@
+.form-title-wrap {
+  position: relative;
+}
+
+.form-title {
+  color: $font-color-dark;
+  font-style: 24px;
+  font-weight: bold;
+  margin-left: -25px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 40px;
+    background-color: $icons-color-green;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    vertical-align: bottom;
+    margin-right: 25px;
+  }
+}

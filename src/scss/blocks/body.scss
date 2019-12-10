@@ -4,6 +4,7 @@ $font-color-dark: #1B1C21;
 $font-color-light: #7E7E82;
 $bcg-color-white: #fff;
 $icons-color-green: #41F6D7;
+$form-color-grey: #B5B6BC;
 
 * {
   box-sizing: border-box;
@@ -13,11 +14,19 @@ body {
   width: 100%;
   font-family: "TTLakes";
   background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper-modal {
+  overflow: hidden;
+  display: inline-flex;
+  max-width: 100%;
 }
 
 .wrapper {
-  display: flex;
+  display: inline-flex;
+  max-width: 100%;
   flex-flow: row nowrap;
   justify-content: center;
-  margin: 0 auto;
 }

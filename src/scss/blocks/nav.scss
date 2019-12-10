@@ -3,7 +3,6 @@
 .nav {
   position: absolute;
   width: 320px;
-  min-height: 100vh;
   background-color: $bcg-color-white;
   top: 0;
   left: 0;
@@ -11,6 +10,7 @@
   display: none;
   flex-flow: column nowrap;
   box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
+  opacity: 0;
 
   &__header {
     display: flex;
@@ -120,7 +120,7 @@
   .nav {
     display: flex;
     position: static;
-
+    opacity: 1;
 
     &__contact {
       margin-top: 140px;

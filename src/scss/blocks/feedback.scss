@@ -1,0 +1,47 @@
+.feedback {
+  width: 440px;
+  max-width: 440px;
+  position: absolute;
+  top: 0;
+  right: -550px;
+  opacity: 0;
+  z-index: 10;
+  height: 100vh;
+  background-color: $bcg-color-white;
+  display: flex;
+  flex-flow: column;
+  padding: 0 25px 80px;
+  border: 1px solid $form-color-grey;
+  border-radius: 3px;
+  transition: all .3s ease;
+
+  // &--feedback--show {}
+
+  &__form {
+    display: flex;
+    flex-flow: column;
+    // text-align: flex-start;
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 500;
+    color: $font-color-light;
+  }
+
+  &__text-color {
+    color: $btn-color-pink;
+  }
+
+}
+
+
+
+@media (max-width: 768px) {
+
+  .feedback {
+    width: 320px;
+    height: auto;
+    padding-top: 55px;
+  }
+}

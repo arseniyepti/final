@@ -69,6 +69,12 @@
     background-color: $btn-color-darkpink;
   }
 
+  @media (max-width:1300px) {
+    &--requisition:first-child {
+      margin: 0;
+    }
+  }
+
   &--brands {
     background-color: $bcg-color-white;
     border: 2px solid $btn-color-pink;
@@ -89,8 +95,33 @@
     margin-right: 15px;
   }
 
+  @media (min-width:1301px) {
+    &--close {
+      display: none;
+    }
+  }
+
   &--close::after {
     background-image: url("../img/close.svg");
+  }
+
+  &--close--modal {
+    display: flex;
+    position: absolute;
+    top: calc(50% - 20px);
+    left: -90px;
+  }
+
+  @media (max-width: 768px) {
+
+    &--close--modal {
+      display: flex;
+      position: absolute;
+      z-index: 100;
+      top: -30px;
+      left: 0;
+    }
+
   }
 
   &--search::after {
@@ -119,19 +150,20 @@
   }
 
   &--order {
+    color: $bcg-color-white;
     background-color: $btn-color-pink;
     width: 120px;
     height: 32px;
     border-radius: 16px;
     transition: all .3s ease;
     border: 2px solid $btn-color-pink;
+    padding-left: 12px;
   }
 
   &--order::after {
-    content: "Заказать";
+    content: "";
     color: $bcg-color-white;
     display: flex;
-    padding-left: 12px;
     align-items: center;
     width: 120px;
     height: 32px;
@@ -140,38 +172,31 @@
   }
 
   &--order:hover::after {
-    color: $btn-color-pink;
     background-color: $bcg-color-white;
     background: url("../img/arrow-right-pink.svg")no-repeat 90% 50% / 15px 15px;
   }
 
   &--order:hover {
+    color: $btn-color-pink;
     border: 2px solid $btn-color-pink;
     background-color: $bcg-color-white;
+  }
+
+  @media (max-width: 768px) {
+
+    &--order {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+    }
+  }
+
+  &--order--position {
+    position: static;
+    margin-left: auto;
   }
 
 
 }
 
 /* _____________________@media button_____________________________ */
-
-@media (max-width: 768px) {
-
-  .button--order {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-  }
-}
-
-@media (max-width:1300px) {
-  .button--requisition:first-child {
-    margin: 0;
-  }
-}
-
-@media (min-width:1301px) {
-  .button--close {
-    display: none;
-  }
-}
