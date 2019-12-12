@@ -69,12 +69,6 @@
     background-color: $btn-color-darkpink;
   }
 
-  @media (max-width:1300px) {
-    &--requisition:first-child {
-      margin: 0;
-    }
-  }
-
   &--brands {
     background-color: $bcg-color-white;
     border: 2px solid $btn-color-pink;
@@ -95,12 +89,6 @@
     margin-right: 15px;
   }
 
-  @media (min-width:1301px) {
-    &--close {
-      display: none;
-    }
-  }
-
   &--close::after {
     background-image: url("../img/close.svg");
   }
@@ -110,18 +98,6 @@
     position: absolute;
     top: calc(50% - 20px);
     left: -90px;
-  }
-
-  @media (max-width: 768px) {
-
-    &--close--modal {
-      display: flex;
-      position: absolute;
-      z-index: 100;
-      top: -30px;
-      left: 0;
-    }
-
   }
 
   &--search::after {
@@ -182,6 +158,32 @@
     background-color: $bcg-color-white;
   }
 
+  /* _____________________@media button_____________________________ */
+
+  @media (max-width:1300px) {
+    &--requisition:first-child {
+      margin: 0;
+    }
+  }
+
+  @media (min-width:1301px) {
+    &--close {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+
+    &--close--modal {
+      display: flex;
+      position: absolute;
+      z-index: 100;
+      top: -30px;
+      left: 0;
+    }
+
+  }
+
   @media (max-width: 768px) {
 
     &--order {
@@ -198,5 +200,3 @@
 
 
 }
-
-/* _____________________@media button_____________________________ */

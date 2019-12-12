@@ -1,3 +1,6 @@
 import "../scss/style.scss";
-import "../js/brands.js";
-import "../js/fix.technic";
+import "./brands.js";
+import "./fix-technic.js";
+import "./feedback-callback.js";
+import "./nav-menu.js";
+import "./swiper.js";

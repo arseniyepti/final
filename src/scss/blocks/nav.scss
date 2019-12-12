@@ -2,15 +2,23 @@
 
 .nav {
   position: absolute;
-  width: 320px;
+  width: 0;
   background-color: $bcg-color-white;
   top: 0;
-  left: 0;
+  left: -200px;
   padding: 24px;
-  display: none;
+  overflow: hidden;
   flex-flow: column nowrap;
   box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
   opacity: 0;
+  transition: all .3s ease;
+
+  &--show {
+    left: 0;
+    z-index: 10;
+    width: 320px;
+    opacity: 1;
+  }
 
   &__header {
     display: flex;
@@ -105,26 +113,24 @@
   &__language-link:hover {
     color: $font-color-light;
   }
-}
 
-.header__logo {
-  margin-right: auto;
-  height: 56px;
-}
+  /* _____________________@media блока меню_____________________________ */
 
+  @media (min-width: 1350px) {
 
-/* _____________________@media блока меню_____________________________ */
-
-@media (min-width: 1301px) {
-
-  .nav {
-    display: flex;
-    position: static;
-    opacity: 1;
+    & {
+      left: 0;
+      width: 320px;
+      display: flex;
+      position: static;
+      opacity: 1;
+      height: auto;
+    }
 
     &__contact {
       margin-top: 140px;
     }
-  }
 
+
+  }
 }

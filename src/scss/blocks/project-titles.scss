@@ -1,11 +1,24 @@
-.project__titles {
+.project-titles {
+  max-width: 100%;
   font-size: 16px;
   text-transform: uppercase;
   color: $font-color-light;
   font-weight: normal;
-  padding: 16px 0 16px 16px;
+  padding: 16px 0 16px 0;
   margin: 0;
   background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%);
   border-top: 1px solid #D9FFF5;
   border-bottom: 1px solid #D9FFF5;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 40px;
+    background-color: $icons-color-green;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    vertical-align: middle;
+    margin-right: 25px;
+  }
 }

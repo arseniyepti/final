@@ -1,9 +1,9 @@
 .feedback {
-  width: 440px;
+  width: 0;
   max-width: 440px;
   position: absolute;
   top: 0;
-  right: -550px;
+  right: -500px;
   opacity: 0;
   z-index: 10;
   height: 100vh;
@@ -15,12 +15,17 @@
   border-radius: 3px;
   transition: all .3s ease;
 
-  // &--feedback--show {}
+  &--show {
+    right: 0;
+    width: 440px;
+    // right: 0;
+    opacity: 1;
+  }
 
   &__form {
     display: flex;
     flex-flow: column;
-    // text-align: flex-start;
+    text-align: flex-start;
   }
 
   &__text {
@@ -33,15 +38,13 @@
     color: $btn-color-pink;
   }
 
-}
+  @media (max-width: 768px) {
 
-
-
-@media (max-width: 768px) {
-
-  .feedback {
-    width: 320px;
-    height: auto;
-    padding-top: 55px;
+    & {
+      width: 320px;
+      height: auto;
+      padding-top: 55px;
+    }
   }
+
 }

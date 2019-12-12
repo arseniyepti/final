@@ -11,6 +11,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    box-sizing: border-box;
   }
 
   &__images-wrap-hidden {
@@ -23,7 +24,7 @@
   }
 
   &__images-item {
-    width: 230px;
+    max-width: 230px;
     height: 160px;
     position: relative;
     border: 1px solid #EAEAEA;
@@ -34,51 +35,43 @@
     margin-bottom: 15px;
   }
 
-  .fix-technic__name {
+  &__name {
     font-size: 16px;
     font-weight: 500;
     color: $font-color-dark;
   }
-}
+
+  /* _____________________@media Секции-бренды_____________________________ */
 
 
-/* _____________________@media Секции-бренды_____________________________ */
+  @media (min-width: 769px) and (max-width: 1119px) {
 
+    &__images-item {
+      width: 29%;
+    }
 
-@media (min-width: 769px) and (max-width: 1119px) {
+    &__images-wrap {
+      justify-content: space-around;
+    }
 
-  .fix-technic__images-item {
-    width: 29%;
   }
 
-  .fix-technic__images-wrap {
-    justify-content: space-around;
+  @media (max-width: 768px) {
+
+    &__images-wrap {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      overflow: scroll;
+    }
+
+    &__images-item {
+      min-width: 230px;
+    }
+
+    &__images-wrap-hidden {
+      height: 230px;
+      overflow: visible;
+    }
+
   }
-
-}
-
-// @media (max-width: 768px) {
-
-//   .fix-technic__images-wrap {
-//     justify-content: space-around;
-//   }
-
-// }
-
-@media (max-width: 768px) {
-
-  .fix-technic__images-wrap {
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    overflow: scroll;
-  }
-
-  .fix-technic__images-item {
-    min-width: 230px;
-  }
-
-  .fix-technic__images-wrap-hidden {
-    height: auto;
-  }
-
 }
