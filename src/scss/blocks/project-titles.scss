@@ -4,8 +4,7 @@
   text-transform: uppercase;
   color: $font-color-light;
   font-weight: normal;
-  padding: 16px 0 16px 0;
-  margin: 0;
+  padding: 16px 0 16px 16px;
   background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%);
   border-top: 1px solid #D9FFF5;
   border-bottom: 1px solid #D9FFF5;
@@ -19,6 +18,7 @@
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
     vertical-align: middle;
-    margin-right: 25px;
+    margin-left: -16px;
+    margin-right: 16px;
   }
 }
