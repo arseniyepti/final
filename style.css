@@ -571,8 +571,7 @@ body {
   text-transform: uppercase;
   color: #7E7E82;
   font-weight: normal;
-  padding: 16px 0 16px 0;
-  margin: 0;
+  padding: 16px 0 16px 16px;
   background: -webkit-gradient(linear, left top, right top, from(#F8F8F8), color-stop(98.61%, #FFFFFF));
   background: -o-linear-gradient(left, #F8F8F8 0%, #FFFFFF 98.61%);
   background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%);
@@ -587,7 +586,8 @@ body {
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
     vertical-align: middle;
-    margin-right: 25px; }
+    margin-left: -16px;
+    margin-right: 16px; }
 
 .form-input {
   color: #B5B6BC;
