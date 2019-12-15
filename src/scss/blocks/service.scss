@@ -78,13 +78,24 @@
     justify-content: space-between;
   }
 
+  &__info-text-wrap--button {
+    width: 50%;
+  }
+
   &__info-text-wrap {
     padding-right: 32px;
-    width: 50%;
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+  }
+
+  &__info-text-wrap--hidden {
+    height: auto;
   }
 
   &__info-img {
     width: 50%;
+    align-self: flex-start;
     border-radius: 6px;
   }
 
@@ -124,6 +135,10 @@
       margin-top: 25px;
       width: 100%;
       max-width: 100%;
+    }
+
+    &__info-text-wrap--button {
+      width: 100%;
     }
 
   }

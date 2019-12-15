@@ -170,9 +170,17 @@
     &--close {
       display: none;
     }
+
+    &--close--modal {
+      display: flex;
+    }
   }
 
   @media (max-width: 768px) {
+
+    .hide-and-show-button {
+      display: none;
+    }
 
     &--close--modal {
       display: flex;
@@ -181,10 +189,6 @@
       top: -30px;
       left: 0;
     }
-
-  }
-
-  @media (max-width: 768px) {
 
     &--order {
       position: absolute;
@@ -199,4 +203,18 @@
   }
 
 
+}
+
+@media (max-width: 768px) {
+
+  .hide-and-show-button {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hide-and-show-button--service {
+    display: inline-block;
+  }
 }

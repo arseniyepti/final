@@ -4,3 +4,4 @@ import "./fix-technic.js";
 import "./feedback-callback.js";
 import "./nav-menu.js";
 import "./swiper.js";
+import "./sevice-hide-text.js";

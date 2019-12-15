@@ -2,8 +2,9 @@
   width: 0;
   max-width: 440px;
   position: absolute;
+  right: 0;
   top: 0;
-  right: -500px;
+  transform: translateX(500px);
   opacity: 0;
   z-index: 10;
   height: 100vh;
@@ -16,10 +17,10 @@
   transition: all .3s ease;
 
   &--show {
-    right: 0;
+    transform: translateX(0);
     width: 440px;
-    // right: 0;
     opacity: 1;
+    height: 100%;
   }
 
   &__form {
@@ -42,9 +43,8 @@
 
     & {
       width: 320px;
-      height: auto;
       padding-top: 55px;
     }
-  }
 
+  }
 }
