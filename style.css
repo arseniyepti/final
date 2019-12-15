@@ -546,7 +546,11 @@ body {
       margin: 0; } }
   @media (min-width: 1301px) {
     .button--close {
-      display: none; } }
+      display: none; }
+    .button--close--modal {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
   @media (max-width: 768px) {
     .button--close--modal {
       display: -webkit-box;
@@ -555,8 +559,7 @@ body {
       position: absolute;
       z-index: 100;
       top: -30px;
-      left: 0; } }
-  @media (max-width: 768px) {
+      left: 0; }
     .button--order {
       position: absolute;
       bottom: 15px;
@@ -661,8 +664,11 @@ body {
   width: 0;
   max-width: 440px;
   position: absolute;
+  right: 0;
   top: 0;
-  right: -500px;
+  -webkit-transform: translateX(500px);
+      -ms-transform: translateX(500px);
+          transform: translateX(500px);
   opacity: 0;
   z-index: 10;
   height: 100vh;
@@ -681,9 +687,12 @@ body {
   -o-transition: all .3s ease;
   transition: all .3s ease; }
   .feedback--show {
-    right: 0;
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
     width: 440px;
-    opacity: 1; }
+    opacity: 1;
+    height: 100vh; }
   .feedback__form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -702,8 +711,10 @@ body {
   @media (max-width: 768px) {
     .feedback {
       width: 320px;
-      height: auto;
-      padding-top: 55px; } }
+      padding-top: 55px; }
+    .feedback--show {
+      height: 100vh;
+      overflow: scroll; } }
 
 /* __________________________header___________________________ */
 .header {
@@ -796,8 +807,11 @@ body {
   position: absolute;
   width: 0;
   background-color: #fff;
+  left: 0;
   top: 0;
-  left: -200px;
+  -webkit-transform: translateX(-500px);
+      -ms-transform: translateX(-500px);
+          transform: translateX(-500px);
   padding: 24px;
   overflow: hidden;
   -webkit-box-orient: vertical;
@@ -810,10 +824,14 @@ body {
   -webkit-transition: all .3s ease;
   -o-transition: all .3s ease;
   transition: all .3s ease;
+  z-index: 10;
   /* _____________________@media блока меню_____________________________ */ }
   .nav--show {
-    left: 0;
-    z-index: 10;
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+    overflow: scroll;
+    height: 100vh;
     width: 320px;
     opacity: 1; }
   .nav__header {
@@ -912,6 +930,9 @@ body {
       display: -ms-flexbox;
       display: flex;
       position: static;
+      -webkit-transform: translateX(0);
+          -ms-transform: translateX(0);
+              transform: translateX(0);
       opacity: 1;
       height: auto; }
     .nav__contact {
