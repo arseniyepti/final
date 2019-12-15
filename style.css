@@ -552,6 +552,8 @@ body {
       display: -ms-flexbox;
       display: flex; } }
   @media (max-width: 768px) {
+    .button .hide-and-show-button {
+      display: none; }
     .button--close--modal {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -567,6 +569,14 @@ body {
   .button--order--position {
     position: static;
     margin-left: auto; }
+
+@media (max-width: 768px) {
+  .hide-and-show-button {
+    display: none; } }
+
+@media (max-width: 768px) {
+  .hide-and-show-button--service {
+    display: inline-block; } }
 
 .project-titles {
   max-width: 100%;
@@ -692,7 +702,7 @@ body {
             transform: translateX(0);
     width: 440px;
     opacity: 1;
-    height: 100vh; }
+    height: 100%; }
   .feedback__form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -711,10 +721,7 @@ body {
   @media (max-width: 768px) {
     .feedback {
       width: 320px;
-      padding-top: 55px; }
-    .feedback--show {
-      height: 100vh;
-      overflow: scroll; } }
+      padding-top: 55px; } }
 
 /* __________________________header___________________________ */
 .header {
@@ -830,8 +837,7 @@ body {
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
             transform: translateX(0);
-    overflow: scroll;
-    height: 100vh;
+    height: 100%;
     width: 320px;
     opacity: 1; }
   .nav__header {
@@ -1026,11 +1032,19 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
+  .service__info-text-wrap--button {
+    width: 50%; }
   .service__info-text-wrap {
     padding-right: 32px;
-    width: 50%; }
+    width: 100%;
+    height: 190px;
+    overflow: hidden; }
+  .service__info-text-wrap--hidden {
+    height: auto; }
   .service__info-img {
     width: 50%;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
     border-radius: 6px; }
   .service__info-text {
     color: #1B1C21;
@@ -1054,7 +1068,9 @@ body {
     .service__info-img {
       margin-top: 25px;
       width: 100%;
-      max-width: 100%; } }
+      max-width: 100%; }
+    .service__info-text-wrap--button {
+      width: 100%; } }
   @media (max-width: 1300px) {
     .service__nav-wrap {
       -ms-flex-wrap: nowrap;
